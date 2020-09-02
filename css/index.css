@@ -1,4 +1,232 @@
-body{
+:root{
+    --width_menu:300px;
+    --padding_menu:10px;
+    --bgcolor_menu:rgb(107, 105, 105);
+    --hovercolor_menu:rgb(23,23,23);
+    --width-collapsed:50px;
+}
+*{
     margin:0;
     padding:0;
+}
+body{
+    background-color: rgb(245,245,245);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left: var(--width-collapsed);
+}
+.body-expanded{
+    margin-left:var(--width_menu)
+}
+
+/* side menu */
+
+.sidemenu{
+    background-color: var(--bgcolor_menu);
+    color: white;
+    position: fixed;
+    height: 100%;
+    top:0;
+    left:0;
+}
+.sidemenu-items_item a{
+    color:white;
+    text-decoration: none;
+}
+.main-container{
+    font-weight: 900;
+}
+
+/*--sidemenu header--*/
+
+.sidemenu-header{
+    vertical-align: middle;
+}
+.sidemenu .sidemenu-header{
+    box-sizing: border-box;
+    border-bottom: solid 1px var(--hovercolor_menu);
+}
+.sidemenu .sidemenu-header .sidemenu-header_title{
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+.sidemenu .sidemenu-header .sidemenu-header_btn{
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    width: var(--width-collapsed);
+    box-sizing: border-box;
+}
+.sidemenu .sidemenu-header .sidemenu-header_btn:hover{
+    background-color: var(--hovercolor_menu);
+}
+.sidemenu .sidemenu-header .sidemenu-header_btn .btn-hamburger{
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    margin: 5px 0;
+}
+
+/*--profile--*/
+.sidemenu .sidemenu-profile{
+    border-bottom: solid 1px var(--hovercolor_menu);
+    padding: var(--padding_menu) 0;
+    text-align: center;
+}
+.sidemenu .sidemenu-profile .sidemenu-profile-photo{
+    box-sizing: border-box;
+    padding: 5px;
+    margin: 0 auto;
+}
+.sidemenu .sidemenu-profile .sidemenu-profile-photo img{
+    border-radius: 50%;
+    width: 100%;
+}
+.sidemenu .sidemenu-profile .sidemenu-profile-name{
+    font-size: 24px;
+    padding:var(--padding_menu) 0;
+    overflow: hidden;
+}
+
+/* Items */
+.sidemenu-items{
+    overflow: hidden;
+}
+.sidemenu-items_item{
+    width: var(--width_menu - 10px);
+}
+.sidemenu-items_item a{
+    display: block;
+}
+.sidemenu-items_item a:hover{
+    background-color: var(--hovercolor_menu);
+}
+.sidemenu-items_item_icon{
+    padding:5px;
+}
+.sidemenu-items_item_icon, .sidemenu-items_item_title{
+    vertical-align: middle;
+    font-size: 14px;
+    overflow: hidden;
+    display: inline-block;
+    box-sizing: border-box;
+}
+/* .sidemenu-items_item_icon{
+    box-sizing: border-box;
+    padding:var(--padding_menu);
+    width: var(--width_menu);
+} */
+.sidemenu-items_item_icon img{
+    width: 40px;
+    height: 40px;
+}
+.sidemenu-items_item_title{
+    padding:var(--padding_menu) 0;
+}
+.sidemenu-items_item .separator{
+    height: 1px;
+    border-bottom: solid 1px var(--hovercolor_menu);
+    margin:15px 0
+}
+
+
+/* menu behaviour */
+.menu-expanded{
+    width: var(--width_menu);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu-expanded .sidemenu-header .sidemenu-header_title{
+    display: inline-block;
+    width: calc(100% - 50px);
+    margin-right: -5px;
+    padding: var(--padding_menu);
+}
+
+.menu-expanded .sidemenu-header .sidemenu-header_title span{
+    width:calc(var(--width_menu) - var(--width-collapsed) - 5px);
+    overflow: hidden;
+
+}
+
+.menu-expanded .sidemenu-profile .sidemenu-profile-photo{
+    width: 200px;
+}
+.menu-expanded .sidemenu-profile .sidemenu-profile-name{
+    widows: 100%;
+}
+
+.menu-expanded .sidemenu-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-expanded .sidemenu-items_item_icon{
+    padding:5px;
+}
+.menu-expanded .sidemenu-items_item_icon img{
+    display: none;
+}
+.menu-collapsed{
+    width: var(--width-collapsed);
+}
+.menu-collapsed .sidemenu-header .sidemenu-header_title{
+    width: 0;
+    height: 0;
+    padding:0;
+    margin:0;
+}
+.menu-collapsed .sidemenu-profile-name, .menu-collapsed .sidemenu-items_item_title{
+    display: none;
+}
+.menu-collapsed .sidemenu-items_item{
+    width: 100px;
+}
+
+
+/* main container */
+.main-container{
+    margin:0;
+    padding:0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows:auto auto auto auto auto auto
+
+}
+#about{
+    height: 600px;
+    width: 100%;
+    border: solid 1px red;
+    /* background-image: url("../assets/imagenes/code-banner.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; */
+}
+#experience{
+    height: 600px;
+    width: 100%;
+    border: solid 1px red;
+}
+#portfolio{
+    height: 600px;
+    width: 100%;
+    border: solid 1px red;
+}
+#skills{
+    height: 600px;
+    width: 100%;
+    border: solid 1px red;
+}
+#awards{
+    height: 600px;
+    width: 100%;
+    border: solid 1px red;
+}
+#contact{
+    height: 600px;
+    width: 100%;
+    border: solid 1px red;
 }
