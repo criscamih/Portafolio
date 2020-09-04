@@ -5,7 +5,7 @@
     --hovercolor_menu:rgb(23,23,23);
     --width-collapsed:50px;
 }
-*{
+html{
     margin:0;
     padding:0;
 }
@@ -14,6 +14,9 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
     margin-left: var(--width-collapsed);
+    overflow-x: hidden;
+    margin-top: 0;
+    margin-right: 0;
 }
 .body-expanded{
     margin-left:var(--width_menu)
@@ -35,7 +38,9 @@ body{
 }
 .main-container{
     font-weight: 900;
+
 }
+
 
 /*--sidemenu header--*/
 
@@ -154,7 +159,7 @@ body{
     width: 200px;
 }
 .menu-expanded .sidemenu-profile .sidemenu-profile-name{
-    widows: 100%;
+    width: 100%;
 }
 
 .menu-expanded .sidemenu-items{
@@ -187,6 +192,10 @@ body{
 
 
 /* main container */
+.icon-container{
+    height: 50px;
+    width: auto;
+}
 .main-container{
     margin:0;
     padding:0;
@@ -199,34 +208,157 @@ body{
 #about{
     height: 600px;
     width: 100%;
-    border: solid 1px red;
-    /* background-image: url("../assets/imagenes/code-banner.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../assets/imagenes/code-banner.jpg");
     background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color:white;
 }
 #experience{
-    height: 600px;
-    width: 100%;
-    border: solid 1px red;
+    height: 800px;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    padding:48px;
 }
 #portfolio{
-    height: 600px;
-    width: 100%;
-    border: solid 1px red;
+    height: 400px;
+    padding:48px;
 }
 #skills{
     height: 600px;
-    width: 100%;
-    border: solid 1px red;
+    padding:48px;
 }
 #awards{
     height: 600px;
-    width: 100%;
-    border: solid 1px red;
+    padding:48px;
 }
 #contact{
     height: 600px;
-    width: 100%;
-    border: solid 1px red;
+    padding:48px;
+}
+
+/* About */
+
+.about-profile{
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    padding: 80px 50px;
+}
+.about-profile_header{
+    vertical-align: middle;
+}
+.about-profile_header_title{
+    display: inline-block;
+}
+.about-profile_header_icon {
+    display:inline-block;
+}
+.about-profile_header_icon img{
+    height: inherit;
+    width: auto;
+}
+.about-profile_footer_icon {
+    display: inline-block;
+}
+.about-profile_footer_icon img{
+    height: inherit;
+    width: auto;
+}
+
+/* card */
+
+.card-container{
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    grid-row-gap: 20px;
+    grid-column-gap:10px;
+}
+.section-title{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.section-title h2{
+    padding-bottom: .5rem;
+    margin-bottom: 0;
+}
+.section-boder-title{
+    border: solid ;
+    width: 5rem;
+    margin: 0 auto;
+}
+.card-container{
+    padding-top: 20px;
+}
+.card-content{
+    padding: 20px;
+    box-sizing: border-box;
+    border: solid .5px blue;
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+}
+.card-container_title{
+    box-sizing: border-box;
+}
+.card-container_title img, .card-container_title h3{
+    display: inline-block;
+    vertical-align: middle;
+}
+.card-container_title img{
+    height: 30px;
+    width: auto;
+}
+.card-container_content{
+    padding: 20px 0;
+    text-align: justify;
+}
+.card-container_footer{
+    box-sizing: border-box;
+    text-align: end;
+    margin: auto 0;
+}
+
+/* customers */
+.horizontal-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 5rem;
+}
+.container-customers {
+    border: solid 0.5 greenyellow;
+    padding: 20px;
+    border-radius: 50%;
+    text-align: center;
+}
+.container-customers img{
+    width: 200px;
+}
+
+/* skills */
+.skills-container{
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+    padding-top: 5rem;
+}
+.skills-items {
+    text-align: center;
+}
+.skills-items img{
+    height: 100px;
+    width: auto;
+    cursor: pointer;
+}
+
+
+/* modal */
+
+.cover-modal{
+    background: url("../assets/imagenes/skewed.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
