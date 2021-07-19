@@ -38,9 +38,10 @@ body{
 }
 .line-separate{
     width: 50px;
-    margin: 10px 0 0 0;    
+    margin: 5px 0 0 0;    
     background: rgb(61, 60, 60);
     height: 5px;
+    display: block;
 
 }
 /* menu */
@@ -132,9 +133,13 @@ background-repeat: no-repeat; */
 }
     .service-container{
         display: grid;
-        grid-template-rows: 100px auto;
+        grid-template-rows: 150px auto;
         height: 100%;
     }
+    /* .service .title{
+        margin: 0;
+        height: 100%;
+    } */
     .service-content{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -165,8 +170,9 @@ background-repeat: no-repeat; */
         display: grid;
         align-items: center;
         justify-content: center;
+        grid-template-rows: auto auto auto;
         width: 100%;
-        padding: 0 15px;
+        padding: 10px 15px;
     }
         .image-contact{
             display: grid;
@@ -196,7 +202,9 @@ background-repeat: no-repeat; */
         display: grid;
         align-items: center;
         justify-content: center;
-        padding: 0 15px;
+        grid-template-rows: auto auto auto;
+        width: 100%;
+        padding: 10px 15px;
     }
     
 /* time-line */
